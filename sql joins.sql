@@ -22,7 +22,7 @@ ORDER BY Total DESC
 LIMIT 2;
 /* joins: find the name of the department, and the name of the category for Appliances and Games */
 SELECT d.Name AS 'Dept Name', c.Name AS 'Category Name'
-FROM deparments AS d
+FROM departments AS d
 JOIN categories AS c
 ON d.DepartmentID = c.DepartmentID
 WHERE c.Name = 'Appliances' OR c.Name = 'Games';
@@ -38,7 +38,7 @@ WHERE c.Name = 'Appliances' OR c.Name = 'Games';
 
 /* joins: find Product name, reviewer name, rating, and comment on the Visio TV. (only return for the lowest rating!) */
 SELECT * FROM products WHERE Name LIKE '%visio%';
-SELECT p.Name, r.Reviwer, r.Rating, r.Comment
+SELECT p.Name, r.Reviewer, r.Rating, r.Comment
 FROM products AS p
 JOIN reviews AS r
 ON p.ProductID = r.ProductID
